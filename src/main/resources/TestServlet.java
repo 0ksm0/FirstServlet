@@ -8,10 +8,11 @@ import java.io.PrintWriter;
 public class TestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String s =req.getParameter("name");
         //resp.setContentType("text/plain");
         PrintWriter out =resp.getWriter();
         out.print("<html><body>");
-        out.print("<h1>Hello World!!!</h1>");
+        out.print("<h1>Prived "+s+"</h1>");
         out.print("</body></html>");
 
 
